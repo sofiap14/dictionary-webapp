@@ -1,8 +1,9 @@
 const express = require('express');
 const request = require('request');
+require('dotenv').config();
 
 const app = express();
-const apiKey = '26f4701d-5f03-4f7b-b402-26db8525409b';
+const apiKey = process.env.DICTIONARY_API_KEY;
 
 app.use(express.urlencoded({ extended: true }));
 
